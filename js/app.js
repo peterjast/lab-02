@@ -10,7 +10,7 @@ function greeting() {
   document.write('Hello ' + userName + '!');
 }
 
-let answer = '';
+let answer;
 let answers = ['yes','no', 'yes', 'yes', 'yes'];
 let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?']
 
