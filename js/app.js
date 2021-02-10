@@ -11,11 +11,8 @@ function greeting() {
 }
 
 let answer = '';
-let firstAnswer = 'yes';
-let secondAnswer = 'no';
-let thirdAnswer = 'yes';
-let fourthAnswer = 'yes';
-let fifthAnswer = 'yes';
+let answers = ['yes','no', 'yes', 'yes', 'yes'];
+let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?']
 
 function isValid(userResponse){
   if (userResponse === 'yes' || userResponse === 'y'){
@@ -37,67 +34,19 @@ function wrongAnswer(){
   alert('Incorrect!');
 }
 
-/* To do: REFACTOR! create a function to check answers in order to eliminate repeated code. Object prototype/Array?
-Also account for null values. Cannot read toLowerCase of null */
+/* To do: account for null values. */
 
-let firstResponse = prompt('Do I have a BA in Philosophy from the University of Washington?').toLowerCase();
-
-isValid(firstResponse);
-
-if (answer === firstAnswer){
-  //console.log('Correct!');
-  correctAnswer();
-} else {
-  //console.log('Incorrect!');
-  wrongAnswer();
-}
-
-let secondResponse = prompt('Have I worked in the medical field?').toLowerCase();
-
-isValid(secondResponse);
-
-if (answer === secondAnswer){
-  //console.log('Correct!');
-  correctAnswer();
-} else {
-  //console.log('Incorrect!');
-  wrongAnswer();
-}
-
-let thirdResponse = prompt('Have I ever lived in another country?').toLowerCase();
-
-isValid(thirdResponse);
-
-if (answer === thirdAnswer){
-  //console.log('Correct!');
-  correctAnswer();
-} else {
-  //console.log('Incorrect!');
-  wrongAnswer();
-}
-
-let fourthResponse = prompt('Do I live in Seattle?').toLowerCase();
-
-isValid(fourthResponse);
-
-if (answer === fourthAnswer){
-  //console.log('Correct!');
-  correctAnswer();
-} else {
-  //console.log('Incorrect!');
-  wrongAnswer();
-}
-
-let fifthResponse = prompt('Do I know how to bartend?').toLowerCase();
-
-isValid(fifthResponse);
-
-if (answer === fifthAnswer){
-  //console.log('Correct!');
-  correctAnswer();
-} else {
-  //console.log('Incorrect!');
-  wrongAnswer();
+for(let i = 0; i < 5; i++){
+  let userResponse = prompt(questions[i]);
+  let validResponse = userResponse.toLowerCase();
+  isValid(validResponse);
+  if (answer === answers[i]){
+    //console.log('Correct')
+    correctAnswer();
+  } else {
+    //console.log('Incorrect!');
+    wrongAnswer();
+  }
 }
 
 alert('Thanks for playing ' + userName + '!');
