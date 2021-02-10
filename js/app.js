@@ -29,8 +29,16 @@ function isValid(userResponse){
   return answer;
 }
 
-/* To do: REFACTOR! create a function to check answers in order to eliminate repeated code. Object prototype?
-Also need separate variables to account for null values. Cannot read toLowerCase of null */
+function correctAnswer(){
+  alert('Correct!');
+}
+
+function wrongAnswer(){
+  alert('Incorrect!');
+}
+
+/* To do: REFACTOR! create a function to check answers in order to eliminate repeated code. Object prototype/Array?
+Also account for null values. Cannot read toLowerCase of null */
 
 let firstResponse = prompt('Do I have a BA in Philosophy from the University of Washington?').toLowerCase();
 
@@ -38,10 +46,10 @@ isValid(firstResponse);
 
 if (answer === firstAnswer){
   //console.log('Correct!');
-  alert('Correct!');
+  correctAnswer();
 } else {
   //console.log('Incorrect!');
-  alert('Incorrect!');
+  wrongAnswer();
 }
 
 let secondResponse = prompt('Have I worked in the medical field?').toLowerCase();
@@ -50,10 +58,10 @@ isValid(secondResponse);
 
 if (answer === secondAnswer){
   //console.log('Correct!');
-  alert('Correct!');
+  correctAnswer();
 } else {
   //console.log('Incorrect!');
-  alert('Incorrect!');
+  wrongAnswer();
 }
 
 let thirdResponse = prompt('Have I ever lived in another country?').toLowerCase();
@@ -62,10 +70,10 @@ isValid(thirdResponse);
 
 if (answer === thirdAnswer){
   //console.log('Correct!');
-  alert('Correct!');
+  correctAnswer();
 } else {
   //console.log('Incorrect!');
-  alert('Incorrect!');
+  wrongAnswer();
 }
 
 let fourthResponse = prompt('Do I live in Seattle?').toLowerCase();
@@ -74,10 +82,10 @@ isValid(fourthResponse);
 
 if (answer === fourthAnswer){
   //console.log('Correct!');
-  alert('Correct!');
+  correctAnswer();
 } else {
   //console.log('Incorrect!');
-  alert('Incorrect!');
+  wrongAnswer();
 }
 
 let fifthResponse = prompt('Do I know how to bartend?').toLowerCase();
@@ -86,10 +94,10 @@ isValid(fifthResponse);
 
 if (answer === fifthAnswer){
   //console.log('Correct!');
-  alert('Correct!');
+  correctAnswer();
 } else {
   //console.log('Incorrect!');
-  alert('Incorrect!');
+  wrongAnswer();
 }
 
 alert('Thanks for playing ' + userName + '!');
