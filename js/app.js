@@ -1,23 +1,23 @@
 'use strict';
 
+let answer;
+let scoreCounter = 0;
+let numGuessCounter = 4;
+let stateGuessCounter = 6;
+let myNum = Math.floor(Math.random() * 101);
+let answers = ['yes','no', 'yes', 'yes', 'yes'];
+let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?'];
+let states = ['washington','california','hawaii','wa','ca','hi'];
+
 let userName = prompt('Hello! Welcome to my page. What\'s your name?');
 
-//console.log('Nice to meet you ' + userName + '! My name is Peter Staker. Get to know me by guessing yes or no!');
-alert('Nice to meet you ' + userName + '! My name is Peter Staker. Get to know me by guessing yes or no!');
+//console.log('Nice to meet you ' + userName + '! My name is Peter. Get to know me by guessing yes or no!');
+alert('Nice to meet you ' + userName + '! I\'m Peter. Get to know me by guessing yes or no!');
 
 // eslint-disable-next-line no-unused-vars
 function greeting() {
   document.write('Hello ' + userName + '!');
 }
-
-let answer;
-let scoreCounter = 0;
-let myAge = 27;
-let ageGuessCounter = 4;
-let stateGuessCounter = 6;
-let answers = ['yes','no', 'yes', 'yes', 'yes'];
-let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?'];
-let states = ['washington','california','hawaii','wa','ca','hi'];
 
 function isValid(userResponse){
   if (userResponse === 'yes' || userResponse === 'y'){
@@ -56,23 +56,23 @@ for(let i = 0; i < 5; i++){
   }
 }
 
-alert('Now that you know a bit about me... guess my age!');
+alert('I picked a random number from 0 to 100. Try to guess it!');
 
 for(let i = 0; i < 4; i++){
-  let ageGuess = prompt('You have ' + ageGuessCounter + ' guesses left. Please enter a number. Age:');
-  if(ageGuess < myAge){
+  let numGuess = prompt('You have ' + numGuessCounter + ' guesses left. Please enter a number:');
+  if(numGuess < myNum){
     alert('Too low!');
-  } else if(ageGuess > myAge){
+  } else if(numGuess > myNum){
     alert('Too High!');
   } else {
-    alert('Correct! I\'m 27 years old.');
+    alert('Correct! The number is ' + myNum + '!');
     break;
   }
-  ageGuessCounter--;
+  numGuessCounter--;
 }
 
-if(ageGuessCounter === 0){
-  alert('You\'re out of guesses! I\'m 27 years old');
+if(numGuessCounter === 0){
+  alert('You\'re out of guesses! It was ' + myNum + '!');
 }
 
 alert('I\'ve lived in three states. Name one of them!');
@@ -85,15 +85,16 @@ for(let i = 0; i < 6; i++){
       if(stateGuess === states[j]){
         correctAnswer();
         scoreCounter++;
-        stateGuessCounter = -1;
+        stateGuessCounter = 0;
         break;
       }
     }
-    stateGuessCounter--;
   } else{
-    alert('I\'ve lived in Washington, California and Hawaii!');
     break;
   }
+  stateGuessCounter--;
 }
+
+alert('I\'ve lived in Washington, California and Hawaii!');
 
 alert('Thanks for playing ' + userName + '! You got ' + scoreCounter + ' out of 7 questions correct!');
