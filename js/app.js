@@ -1,9 +1,11 @@
 'use strict';
 
-let answer;
+let answer = '';
+
 let scoreCounter = 0;
 let numGuessCounter = 4;
 let stateGuessCounter = 6;
+
 let myNum = Math.floor(Math.random() * 101);
 let answers = ['yes','no', 'yes', 'yes', 'yes'];
 let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?'];
@@ -41,8 +43,6 @@ function wrongAnswer(){
   alert('Incorrect!');
 }
 
-/* To do: account for null values. */
-
 for(let i = 0; i < 5; i++){
   let response = prompt(questions[i]);
   let userResponse = response.toLowerCase();
@@ -55,6 +55,8 @@ for(let i = 0; i < 5; i++){
     wrongAnswer();
   }
 }
+
+/* To do: validate user input - datatypes*/
 
 alert('I picked a random number from 0 to 100. Try to guess it!');
 

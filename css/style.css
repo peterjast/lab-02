@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     overflow-x:hidden;
-    overflow-y:auto;
+    overflow-y:scroll;
 }
  
 header {
