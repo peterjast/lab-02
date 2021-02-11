@@ -17,7 +17,7 @@ let userName = prompt('Hello! Welcome to my page. What\'s your name?');
 alert('Nice to meet you ' + userName + '! I\'m Peter. Get to know me by guessing yes or no!');
 
 // eslint-disable-next-line no-unused-vars
-function greeting() {
+function greeting(){
   document.write('Hello ' + userName + '!');
 }
 
