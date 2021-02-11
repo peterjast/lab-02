@@ -1,6 +1,6 @@
 'use strict';
 
-let answer = '';
+let userAnswer = '';
 
 let scoreCounter = 0;
 let numGuessCounter = 4;
@@ -23,15 +23,15 @@ function greeting(){
 
 function isValid(userResponse){
   if (userResponse === 'yes' || userResponse === 'y'){
-    answer = 'yes';
+    userAnswer = 'yes';
   } else if (userResponse === 'no' || userResponse === 'n'){
-    answer = 'no';
+    userAnswer = 'no';
   } else {
     //console.log('Invalid response!');
-    answer = '';
+    userAnswer = '';
     alert('Invalid response!');
   }
-  return answer;
+  return userAnswer;
 }
 
 function correctAnswer(){
@@ -47,7 +47,7 @@ for(let i = 0; i < 5; i++){
   let response = prompt(questions[i]);
   let userResponse = response.toLowerCase();
   isValid(userResponse);
-  if (answer === answers[i]){
+  if (userAnswer === answers[i]){
     //console.log('Correct!')
     correctAnswer();
   } else {
@@ -56,7 +56,7 @@ for(let i = 0; i < 5; i++){
   }
 }
 
-/* To do: validate user input - datatypes*/
+/* To do: validate user input - null/undefined - datatypes*/
 
 alert('I picked a random number from 0 to 100. Try to guess it!');
 
@@ -91,8 +91,6 @@ for(let i = 0; i < 6; i++){
         break;
       }
     }
-  } else{
-    break;
   }
   stateGuessCounter--;
 }
