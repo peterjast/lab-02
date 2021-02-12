@@ -1,6 +1,6 @@
 'use strict';
 
-let answer = '';
+let validResponse = '';
 
 let scoreCounter = 0;
 let numGuessCounter = 4;
@@ -21,17 +21,17 @@ function greeting(){
   document.write('Hello ' + userName + '!');
 }
 
-function isValid(userResponse){
+function isValidResponse(userResponse){
   if (userResponse === 'yes' || userResponse === 'y'){
-    answer = 'yes';
+    validResponse = 'yes';
   } else if (userResponse === 'no' || userResponse === 'n'){
-    answer = 'no';
+    validResponse = 'no';
   } else {
     //console.log('Invalid response!');
-    answer = '';
+    validResponse = '';
     alert('Invalid response!');
   }
-  return answer;
+  return validResponse;
 }
 
 function correctAnswer(){
@@ -47,8 +47,8 @@ function yesNoGuessingGame(){
   for(let i = 0; i < 5; i++){
     let response = prompt(questions[i]);
     let userResponse = response.toLowerCase();
-    isValid(userResponse);
-    if (answer === answers[i]){
+    isValidResponse(userResponse);
+    if (validResponse === answers[i]){
     //console.log('Correct!')
       correctAnswer();
     } else {
@@ -60,7 +60,6 @@ function yesNoGuessingGame(){
 
 function numGuessingGame(){
   alert('I picked a random number from 0 to 100. Try to guess it!');
-
   for(let i = 0; i < 4; i++){
     let numGuess = prompt('You have ' + numGuessCounter + ' guesses left. Please enter a number:');
     if(numGuess < myNum){
@@ -73,7 +72,6 @@ function numGuessingGame(){
     }
     numGuessCounter--;
   }
-
   if(numGuessCounter === 0){
     alert('You\'re out of guesses! It was ' + myNum + '!');
   }
@@ -81,7 +79,6 @@ function numGuessingGame(){
 
 function stateGuessingGame(){
   alert('I\'ve lived in three states. Name one of them!');
-
   for(let i = 0; i < 6; i++){
     if(stateGuessCounter > 0){
       let guess = prompt('You have ' + stateGuessCounter + ' guesses left. Please enter a state:');
@@ -97,7 +94,6 @@ function stateGuessingGame(){
     }
     stateGuessCounter--;
   }
-
   alert('I\'ve lived in Washington, California and Hawaii!');
 }
 
