@@ -1,19 +1,19 @@
 'use strict';
 
-let validResponse = '';
-
 let scoreCounter = 0;
 let numGuessCounter = 4;
 let stateGuessCounter = 6;
 
-let myNum = Math.floor(Math.random() * 101);
 let answers = ['yes','no', 'yes', 'yes', 'yes'];
 let questions = ['Do I have a BA in Philosophy from the University of Washington?', 'Have I worked in the medical field?', 'Have I ever lived in another country?', 'Do I live in Seattle?','Do I know how to bartend?'];
 let states = ['washington','california','hawaii','wa','ca','hi'];
 
+let validResponse = '';
+
+let myNum = Math.floor(Math.random() * 101);
+
 let userName = prompt('Hello! Welcome to my page. What\'s your name?');
 
-//console.log('Nice to meet you ' + userName + '! My name is Peter. Get to know me by guessing yes or no!');
 alert('Nice to meet you ' + userName + '! I\'m Peter. Get to know me by guessing yes or no!');
 
 // eslint-disable-next-line no-unused-vars
@@ -27,7 +27,6 @@ function isValidResponse(userResponse){
   } else if (userResponse === 'no' || userResponse === 'n'){
     validResponse = 'no';
   } else {
-    //console.log('Invalid response!');
     validResponse = '';
     alert('Invalid response!');
   }
@@ -49,10 +48,8 @@ function yesNoGuessingGame(){
     let userResponse = response.toLowerCase();
     isValidResponse(userResponse);
     if (validResponse === answers[i]){
-    //console.log('Correct!')
       correctAnswer();
     } else {
-    //console.log('Incorrect!');
       wrongAnswer();
     }
   }
