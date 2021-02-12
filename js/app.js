@@ -1,6 +1,6 @@
 'use strict';
 
-let userAnswer = '';
+let answer = '';
 
 let scoreCounter = 0;
 let numGuessCounter = 4;
@@ -23,15 +23,15 @@ function greeting(){
 
 function isValid(userResponse){
   if (userResponse === 'yes' || userResponse === 'y'){
-    userAnswer = 'yes';
+    answer = 'yes';
   } else if (userResponse === 'no' || userResponse === 'n'){
-    userAnswer = 'no';
+    answer = 'no';
   } else {
     //console.log('Invalid response!');
-    userAnswer = '';
+    answer = '';
     alert('Invalid response!');
   }
-  return userAnswer;
+  return answer;
 }
 
 function correctAnswer(){
@@ -43,52 +43,21 @@ function wrongAnswer(){
   alert('Incorrect!');
 }
 
-// for(let i = 0; i < 5; i++){
-//   let response = prompt(questions[i]);
-//   let userResponse = response.toLowerCase();
-//   isValid(userResponse);
-//   if (userAnswer === answers[i]){
-//     //console.log('Correct!')
-//     correctAnswer();
-//   } else {
-//     //console.log('Incorrect!');
-//     wrongAnswer();
-//   }
-// }
 function yesNoGuessingGame(){
   for(let i = 0; i < 5; i++){
     let response = prompt(questions[i]);
     let userResponse = response.toLowerCase();
     isValid(userResponse);
-    if (userAnswer === answers[i]){
-      //console.log('Correct!')
+    if (answer === answers[i]){
+    //console.log('Correct!')
       correctAnswer();
     } else {
-      //console.log('Incorrect!');
+    //console.log('Incorrect!');
       wrongAnswer();
     }
   }
 }
-/* To do: validate user input - null/undefined - datatypes*/
 
-// alert('I picked a random number from 0 to 100. Try to guess it!');
-
-// for(let i = 0; i < 4; i++){
-//   let numGuess = prompt('You have ' + numGuessCounter + ' guesses left. Please enter a number:');
-//   if(numGuess < myNum){
-//     alert('Too low!');
-//   } else if(numGuess > myNum){
-//     alert('Too High!');
-//   } else {
-//     alert('Correct! The number is ' + myNum + '!');
-//     break;
-//   }
-//   numGuessCounter--;
-// }
-
-// if(numGuessCounter === 0){
-//   alert('You\'re out of guesses! It was ' + myNum + '!');
-// }
 function numGuessingGame(){
   alert('I picked a random number from 0 to 100. Try to guess it!');
 
@@ -110,25 +79,6 @@ function numGuessingGame(){
   }
 }
 
-// alert('I\'ve lived in three states. Name one of them!');
-
-// for(let i = 0; i < 6; i++){
-//   if(stateGuessCounter > 0){
-//     let guess = prompt('You have ' + stateGuessCounter + ' guesses left. Please enter a state:');
-//     let stateGuess = guess.toLowerCase();
-//     for(let j = 0; j < 6; j++){
-//       if(stateGuess === states[j]){
-//         correctAnswer();
-//         scoreCounter++;
-//         stateGuessCounter = 0;
-//         break;
-//       }
-//     }
-//   }
-//   stateGuessCounter--;
-// }
-
-// alert('I\'ve lived in Washington, California and Hawaii!');
 function stateGuessingGame(){
   alert('I\'ve lived in three states. Name one of them!');
 
@@ -151,7 +101,7 @@ function stateGuessingGame(){
   alert('I\'ve lived in Washington, California and Hawaii!');
 }
 
-yesNoGuessingGame(); 
+yesNoGuessingGame();
 numGuessingGame();
 stateGuessingGame();
 
