@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/android-chrome-512x512.png">
     <title>About Me Guessing Game</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
     <script src="js/app.js"></script>   
 </head>
-<body>
+<body class="Site">
     <header>
         <h1><script>greeting()</script></h1>
     </header>
-    <main>
-        <article>
-        <h2>About me</h2>
+    <main class="Site-content">
+        <article class="about">
+        <h2 class="about">Peter Staker</h2>
         <p>
-            My name is Peter Staker. I'm enthusiastic about technology and I have a background in philosophy. 
+            Welcome to my page! I'm a technology enthusiast with a background in philosophy. 
             I’ve worked as a Bartender, Event Promoter, Brand Ambassador, Prosecutor Assistant and I’ve helped open two restaurants.
             Education and lifelong learning are very important to me and over these past few years, 
             I've fully committed to a growth mindset and a never-ending pursuit of knowledge. 
@@ -28,36 +30,40 @@
         </p>
         </article>
         <article>
-            <h2>Work History</h2>
-            <ul>
-                <li>Bartender</li>
-                <li>Prosecutor Assistant</li>
-                <li>Brand Ambassador</li>
-                <li>Event Promoter</li>
-            </ul>
-        </article>
+        <div class="row">
+            <div class="column left">
+                <h2>Work History</h2>
+                <ul>
+                    <li>Prosecutor Assistant</li>
+                    <li>Brand Ambassador</li>
+                    <li>Event Promoter</li>
+                    <li>Bartender</li>
+                </ul>
+            </div>
+            <div class="column right">
+                <h2>Education</h2>
+                <ul>
+                    <li>CodeFellows - Certificate, Advanced Software Development in Full-Stack JavaScript</li>
+                    <li>University of Pennsylvania - Certificate, Computational Problem Solving</li>
+                    <li>University of Washington - Bachelor of Arts Degree in Philosophy</li>
+                    <li>University of Washington - Certificate, Web Development</li>
+                </ul>
+            </div>
+        </div>
+    </article>
         <article>
-            <h2>Education</h2>
-            <ul>
-                <li>University of Washington - BA in Philosophy</li>
-                <li>CodeFellows - Certificate, Advanced Software Development in Full-Stack JavaScript</li>
-                <li>University of Washington - Certificate, Full-Stack Web Development</li>
-                <li>University of Pennsylvania - Certificate, Computational Problem Solving</li>
-            </ul>
-        </article>
-        <article>
-            <h2>Top Ten Greatest Actors</h2>
-            <ol>
+            <h2 class="actors">Top Ten Greatest Actors</h2>
+            <ol type ="1" class="act">
                 <li>Tom Hanks</li>
                 <li>Jack Nicholson</li>
                 <li>Robert DeNiro</li>
-                <li>Johnny Depp</li>
                 <li>Al Pacino</li>
+                <li>Johnny Depp</li>
                 <li>Leonardo Di Caprio</li>
                 <li>Marlon Brando</li>
                 <li>Morgan Freeman</li>
                 <li>Daniel Day Lewis</li>
-                <li>Samuel L. Jackson</li>
+                <li>Christian Bale
             </ol>
         </article>
     </main>

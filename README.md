@@ -39,4 +39,3 @@ Uses of JavaScript arrays, for loops and functions to create a series of guessin
     * Lists of work and education experience
 
     * List of greatest actors
-    

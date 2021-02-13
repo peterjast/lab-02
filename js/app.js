@@ -10,11 +10,11 @@ let states = ['washington','california','hawaii','wa','ca','hi'];
 
 let validResponse = '';
 
-let myNum = Math.floor(Math.random() * 101);
+let myNum = Math.floor(Math.random() * (50 + 1));
 
 let userName = prompt('Hello! Welcome to my page. What\'s your name?');
 
-alert('Nice to meet you ' + userName + '! I\'m Peter. Get to know me by guessing yes or no!');
+alert('Nice to meet you ' + userName + '! I\'m Peter. Guess yes or no to get to know me!');
 
 // eslint-disable-next-line no-unused-vars
 function greeting(){
@@ -56,7 +56,7 @@ function yesNoGuessingGame(){
 }
 
 function numGuessingGame(){
-  alert('I picked a random number from 0 to 100. Try to guess it!');
+  alert('I picked a random number from 0 to 50. Try to guess it!');
   for(let i = 0; i < 4; i++){
     let numGuess = prompt('You have ' + numGuessCounter + ' guesses left. Please enter a number:');
     if(numGuess < myNum){
