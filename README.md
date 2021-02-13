@@ -11,28 +11,28 @@ Uses of JavaScript arrays, for loops and functions to create a series of guessin
 #### User Stories
 
     * User is prompted to input their name and then alerted with a personalized greeting
-![What is your name](img/Screenshot(298).png)
-![What is your name](img/Screenshot(299).png)
+![Enter user name](img/Screenshot298.png)
+![Welcome Message](img/Screenshot299.png)
 
     * User is asked to guess the answers to a series of yes or no (y/n) questions in order to learn more about the author
-![What is your name](img/Screenshot(300).png)
+![Get to know me](img/Screenshot300.png)
 
     * User is notified if answer is correct or incorrect
-![What is your name](img/Screenshot(301).png)
+![wrong or right](img/Screenshot301.png)
 
     * User is asked to guess a randomly generated number from 0-50
-![What is your name](img/Screenshot(295).png)
+![Random number guess](img/Screenshot295.png)
 
     * User has 4 guesses and is alerted if guess is too high or too low
-![What is your name](img/Screenshot(297).png)
-![What is your name](img/Screenshot(296).png)
+![guesses left](img/Screenshot297.png)
+![Too high](img/Screenshot296.png)
 
     * User is given 6 guesses to guess one of 3 states
-![What is your name](img/Screenshot(315).png)
-![What is your name](img/Screenshot(317).png)
+![Guess state](img/Screenshot315.png)
+![guess state](img/Screenshot317.png)
 
     * A personalized message to the user tells them how many answers they got correct and then the about me page loads
-![What is your name](img/Screenshot(293).png)
+![correct answers](img/Screenshot293.png)
 
 
 #### Features
